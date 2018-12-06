@@ -118,4 +118,15 @@ public class ComplexTest {
     assertEquals(real, copy.getReal(), delta);
     assertEquals(imaginary, copy.getImaginary(), delta);
   }
+
+  @Test
+  public void testSubtractAnotherComplex() {
+    Complex first = new Complex(0.32, 55.13);
+    Complex second = new Complex(-134.33, 12.01);
+
+    Complex result = first.subtract(second);
+
+    assertEquals(first.getReal()-second.getReal(), result.getReal(), delta);
+    assertEquals(first.getImaginary()-second.getImaginary(), result.getImaginary(), delta);
+  }
 }

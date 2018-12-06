@@ -67,6 +67,13 @@ public class Complex {
     return result;
   }
 
+  public Complex subtract(Complex second) {
+    Complex result = new Complex();
+    result.setReal(this.getReal() - second.getReal());
+    result.setImaginary(this.getImaginary() - second.getImaginary());
+    return result;
+  }
+
   // Every object has a toString method. One is always provided
   // by Java. However, we can choose to override the standard implementation
   // to make a more sensible presentation of our objects.
