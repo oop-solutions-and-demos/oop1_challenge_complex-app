@@ -68,10 +68,14 @@ public class Complex {
   }
 
   public Complex subtract(Complex second) {
-    Complex result = new Complex();
-    result.setReal(this.getReal() - second.getReal());
-    result.setImaginary(this.getImaginary() - second.getImaginary());
-    return result;
+    // Basic solution
+    // Complex result = new Complex();
+    // result.setReal(this.getReal() - second.getReal());
+    // result.setImaginary(this.getImaginary() - second.getImaginary());
+    // return result;
+
+    // Reuse of the add method
+    return this.add(new Complex(-second.getReal(), -second.getImaginary()));
   }
 
   public Complex multiply(Complex second) {
@@ -81,16 +85,35 @@ public class Complex {
     return result;
   }
 
+  // Division can actually be quitte simple:
+  // checkout https://www.mathsisfun.com/numbers/complex-numbers.html
+  public Complex divide(Complex second) {
+    Complex conjugate = second.conjugate();
+    Complex top = this.multiply(conjugate);
+    Complex bottom = second.multiply(conjugate);
+
+    Complex result = top.divide(bottom.getReal());
+    return result;
+  }
+
+  public Complex conjugate() {
+    return new Complex(getReal(), -getImaginary());
+  }
+
   // A method with the name multiply already excists. This is however
   // not a problem since the arguments differ. So Java is able to
   // distinguish between the two.
   // This is also called method overloading. Same principle as with
   // having multiple constructors = constructor overloading
   public Complex multiply(double factor) {
-    Complex result = new Complex();
-    result.setReal(getReal() * factor);
-    result.setImaginary(getImaginary() * factor);
-    return result;
+    // A basic solution
+    // Complex result = new Complex();
+    // result.setReal(getReal() * factor);
+    // result.setImaginary(getImaginary() * factor);
+    // return result;
+
+    // A shorter solution
+    return this.multiply(new Complex(factor, 0));
   }
 
   // The divide method for a factor can be implemented as a

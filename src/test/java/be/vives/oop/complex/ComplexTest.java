@@ -162,4 +162,24 @@ public class ComplexTest {
     assertEquals(100, result.getReal(), delta);
     assertEquals(-12, result.getImaginary(), delta);
   }
+  
+  @Test
+  public void testConjugate() {
+    Complex first = new Complex(2, 3);
+    Complex result = first.conjugate();
+
+    assertEquals(first.getReal(), result.getReal(), delta);
+    assertEquals(-first.getImaginary(), result.getImaginary(), delta);
+  }
+  
+  @Test
+  public void testDivideAnotherComplex() {
+    Complex first = new Complex(2, 3);
+    Complex second = new Complex(4, -5);
+
+    Complex result = first.divide(second);
+
+    assertEquals(-7.0/41, result.getReal(), delta);
+    assertEquals(22.0/41, result.getImaginary(), delta);
+  }
 }
