@@ -81,6 +81,13 @@ public class Complex {
     return result;
   }
 
+  public Complex divide(double factor) {
+    Complex result = new Complex();
+    result.setReal(getReal() / factor);
+    result.setImaginary(getImaginary() / factor);
+    return result;
+  }
+
   // Every object has a toString method. One is always provided
   // by Java. However, we can choose to override the standard implementation
   // to make a more sensible presentation of our objects.
