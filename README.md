@@ -10,17 +10,17 @@ A complex number is a number that can be expressed in the form `a + bi`, where a
 
 Model your class so the following requirements are met:
 
-* Add getters and setters for the imaginary and real parts
-* Add a constructor which allows a Complex number to be created initialized with a real and imaginary number
-* Add a toString method which return the complex number in the format `"a + bj"`
-* Add a method that can add two complex numbers and return the result as a new object
-* Add a copy constructor which allows the user to create copies of an already existing instance
-* Add a method that can subtract a complex number from another and return the result as a new object
-* Add a method that can multiply the complex number with a real, returning the result as a new object
-* Add a method that can divide the complex number by a real factor, returning the result as a new object
-* Add a method that can multiply two complex numbers and return the result as a new object. Search online if you need some info on how to multiply two complex numbers.
-* Add a method that can divide two complex numbers and return the result as a new object. Search online if you need some info on how to divide two complex numbers.
-* Add tests to the maven project found below to test your implementation of subtract, multiply (both with factor and other complex number) and divide (both with factor and other complex number). Create your test before you add the implementation to the Complex class.
+* [ ] Add getters and setters for the imaginary and real parts
+* [ ] Add a constructor which allows a Complex number to be created initialized with a real and imaginary number
+* [ ] Add a toString method which return the complex number in the format `"a + bj"`
+* [ ] Add a method that can add two complex numbers and return the result as a new object
+* [ ] Add a copy constructor which allows the user to create copies of an already existing instance
+* [ ] Add a method that can subtract a complex number from another and return the result as a new object
+* [ ] Add a method that can multiply the complex number with a real, returning the result as a new object
+* [ ] Add a method that can divide the complex number by a real factor, returning the result as a new object
+* [ ] Add a method that can multiply two complex numbers and return the result as a new object. Search online if you need some info on how to multiply two complex numbers.
+* [ ] Add a method that can divide two complex numbers and return the result as a new object. Search online if you need some info on how to divide two complex numbers.
+* [ ] Add tests to the maven project found below to test your implementation of subtract, multiply (both with factor and other complex number) and divide (both with factor and other complex number). Create your test before you add the implementation to the Complex class.
 
 Your class should adhere to the following UML model:
 

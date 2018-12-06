@@ -53,21 +53,21 @@ public class ComplexTest {
   public void testToString() {
     Complex number = new Complex(0.32, 55.13);
 
-    assertEquals("0.32 + 55.13j", number.toString());
+    assertEquals("(0.32 + 55.13j)", number.toString());
   }
 
   @Test
   public void testToStringForNegativeRealPart() {
     Complex number = new Complex(-0.32, 55.13);
 
-    assertEquals("-0.32 + 55.13j", number.toString());
+    assertEquals("(-0.32 + 55.13j)", number.toString());
   }
 
   @Test
   public void testToStringForNegativeImaginaryPart() {
     Complex number = new Complex(0.32, -55.13);
 
-    assertEquals("0.32 - 55.13j", number.toString());
+    assertEquals("(0.32 - 55.13j)", number.toString());
   }
 
   @Test
@@ -78,7 +78,7 @@ public class ComplexTest {
     Complex result = first.add(second);
 
     assertEquals(first.getReal()+second.getReal(), result.getReal(), delta);
-    // assertEquals(first.getImaginary()+second.getImaginary(), result.getImaginary(), delta);
+    assertEquals(first.getImaginary()+second.getImaginary(), result.getImaginary(), delta);
   }
 
   @Test
