@@ -74,10 +74,10 @@ public class Complex {
   // a string context.
   @Override
   public String toString() {
-    return String.format("%1$,.2f", getReal())
+    return "(" + String.format("%1$,.2f", getReal())
       + (imaginary < 0 ? " - " : " + ")
       + String.format("%1$,.2f", Math.abs(getImaginary()))
-      + "j";
+      + "j" + ")";
   }
 
   // Attributes of the class (properties / data)
