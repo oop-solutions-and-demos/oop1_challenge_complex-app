@@ -140,4 +140,15 @@ public class ComplexTest {
     assertEquals(-11, result.getReal(), delta);
     assertEquals(23, result.getImaginary(), delta);
   }
+  
+  @Test
+  public void testDivideByFactor() {
+    Complex first = new Complex(25, -3);
+    double factor = 2;
+
+    Complex result = first.divide(factor);
+
+    assertEquals(12.5, result.getReal(), delta);
+    assertEquals(-1.5, result.getImaginary(), delta);
+  }
 }
