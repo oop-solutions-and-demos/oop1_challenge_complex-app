@@ -151,4 +151,15 @@ public class ComplexTest {
     assertEquals(12.5, result.getReal(), delta);
     assertEquals(-1.5, result.getImaginary(), delta);
   }
+  
+  @Test
+  public void testMultiplyByFactor() {
+    Complex first = new Complex(25, -3);
+    double factor = 4.;
+
+    Complex result = first.multiply(factor);
+
+    assertEquals(100, result.getReal(), delta);
+    assertEquals(-12, result.getImaginary(), delta);
+  }
 }

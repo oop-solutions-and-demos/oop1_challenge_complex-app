@@ -81,11 +81,25 @@ public class Complex {
     return result;
   }
 
-  public Complex divide(double factor) {
+  // A method with the name multiply already excists. This is however
+  // not a problem since the arguments differ. So Java is able to
+  // distinguish between the two.
+  // This is also called method overloading. Same principle as with
+  // having multiple constructors = constructor overloading
+  public Complex multiply(double factor) {
     Complex result = new Complex();
-    result.setReal(getReal() / factor);
-    result.setImaginary(getImaginary() / factor);
+    result.setReal(getReal() * factor);
+    result.setImaginary(getImaginary() * factor);
     return result;
+  }
+
+  // The divide method for a factor can be implemented as a
+  // multiplication with a value of 1/factor. This reuses the
+  // existing code.
+  // If you already implemented this method than you easily refactor
+  // it. The tests have our back.
+  public Complex divide(double factor) {
+    return multiply(1/factor);
   }
 
   // Every object has a toString method. One is always provided
