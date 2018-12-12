@@ -61,3 +61,13 @@ So `System.out.println(String.format("%1$,.2f", 88.1234567));` would result in `
 The maven project inside this repo has a main with some demo code and a battery of unit tests to test your implementation.
 
 Make sure to fork the project first to your own account. That way you have your own personal copy. Next you can clone it and hack at it.
+
+## Solution
+
+The solution to this assignment can be found in the solution branch. Clone the repo and checkout the branch.
+
+```shell
+git clone https://github.com/oop-solutions-and-demos/oop1_challenge_complex-app.git
+cd oop1_challenge_complex
+git checkout solution
+```
