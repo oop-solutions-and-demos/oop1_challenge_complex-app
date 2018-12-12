@@ -68,6 +68,6 @@ The solution to this assignment can be found in the solution branch. Clone the r
 
 ```shell
 git clone https://github.com/oop-solutions-and-demos/oop1_challenge_complex-app.git
-cd oop1_challenge_complex
+cd oop1_challenge_complex-app
 git checkout solution
 ```
